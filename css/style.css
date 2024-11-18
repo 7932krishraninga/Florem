@@ -180,7 +180,7 @@ header {
 /* main */
 .banner {
     background-image: url(../images/banner/banner.jpg);
-    height: 110vh;
+    height: 100%;
     /* animation: scalein 20s infinite; */
 }
 
@@ -198,8 +198,18 @@ header {
     padding-top: 250px;
 }
 
-.banner-rest-content h1 {
-    font-size: 74px;
+@media (min-width:991px) {
+    .banner-rest-content h1 {
+        font-size: 74px !important;
+    }
+    .navbar .navbar-nav{
+        background: transparent !important;
+    }
+}
+@media (max-width:991px) {
+   .navbar .navbar-nav > li > a{
+    color: white !important;
+   }
 }
 
 .banner-rest-content p {
@@ -911,11 +921,16 @@ header {
 
 .contact-form {
     padding: 46px 42px;
-    width: 600px;
-    right: 15%;
+    width: 100%;
+    right: 2%;
     top: 31%;
 }
-
+@media (min-width:991px) {
+    .contact-form {
+        width: 600px;
+        right: 15%;
+    }
+}
 .contact-form input::placeholder {
     color: gray;
 }
